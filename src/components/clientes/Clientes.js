@@ -129,9 +129,9 @@ const Clientes = ({ fondo, colorfondo, titulo }) => {
                                 alignItems: 'center',
                                 justifyContent: 'center'
                             }}>
-                                { itemData.map((cliente) => {
+                                { itemData.map((cliente, i) => {
                                     return (
-                                        <Grid sx={{
+                                        <Grid key={i} sx={{
                                             alignItems: 'center',
                                             justifyContent: 'center'
                                         }}>
@@ -145,7 +145,6 @@ const Clientes = ({ fondo, colorfondo, titulo }) => {
                     </Box>
                 </ScrollAnimation>
             </Box>
-
         </Container >
     )
 }

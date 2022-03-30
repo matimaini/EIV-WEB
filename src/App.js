@@ -53,12 +53,18 @@ function App() {
         
           <ThemeProvider theme={ThemeC}>
             <Barra />
-            <Container maxWidth="100%" sx={{
+            <Container 
+              maxWidth="100%" sx={{
               minHeight: "100vh",
               verticalAlign: "center",
-              alignContent: "center"
+              alignContent: "center",
+              backgroundImage: `url(/logos/img_redes_para_fondo_celeste.png)`,
+              backgroundRepeat: 'no-repeat',
+              backgroundPosition: "center center",
+              backgroundSize: "cover",
+              backgroundAttachment: "fixed",
             }} >
-              <Slider class="slide" />
+              <Slider />
             </Container>
             <a name="Empresa" href='#empresa'> </a>
             <Empresa
