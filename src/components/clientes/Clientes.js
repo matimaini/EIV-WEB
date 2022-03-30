@@ -1,6 +1,7 @@
 import React from 'react'
 import { Container, Typography } from '@mui/material'
 import Grid from '@mui/material/Grid';
+import { styled } from '@mui/material/styles';  
 import { Box } from '@mui/system'
 import Agilcred from '../../assets/logos/clientes/AGILCRED.png';
 import Aginco from '../../assets/logos/clientes/AGINCO.png';
@@ -17,6 +18,10 @@ import ScrollAnimation from 'react-animate-on-scroll'
 
 const Clientes = ({ fondo, colorfondo, titulo }) => {
 
+    const Image = styled(Box)(() => ({
+        objectFit: 'scale-down',
+    }))
+
     const itemData = [
         {
           img: Agilcred,
@@ -24,20 +29,44 @@ const Clientes = ({ fondo, colorfondo, titulo }) => {
         },
         {
             img: Aginco,
-            title: 'Aginco',
+            title: 'Mutual Aginco',
+        },
+        {
+            img: Gusa,
+            title: 'Grupo Union SA'
+        },
+        {
+            img: Federada,
+            title: 'Federada ayuda economica',
         },
         {
             img: Amesup,
             title: 'Amesup',
         },
         {
-            img: Federada,
-            title: 'Federada',
+            img: Ivc,
+            title: 'IVC'
         },
         {
-            img: Agilcred,
-            title: 'Fern',
-          },
+            img: Provincial,
+            title: 'Mutual Provincial',
+        },
+        {
+            img: Mupim,
+            title: 'Mupim'
+        },
+        {
+            img: Lyf,
+            title: 'Luz y fuerza',
+        }, 
+        {
+            img: Scbs,
+            title: 'San cristobal',
+        },
+        {
+            img: Venado,
+            title: 'Venado'
+        }
       ];
 
 
@@ -60,7 +89,7 @@ const Clientes = ({ fondo, colorfondo, titulo }) => {
                 backgroundSize: "cover",
                 backgroundAttachment: "fixed",
                 display: "flex",
-
+                p: 5
             }}  >
 
             <Box sx={{
@@ -92,50 +121,27 @@ const Clientes = ({ fondo, colorfondo, titulo }) => {
                         textAlign: 'left',
                         borderLeft: 0,
                         borderColor: 'text.primary',
-                        p: 5,
-
+                        justifyContent: 'center',
+                        alignItems: 'center'
                     }}>
-                        <Container >
-                            <Grid container spacing={8}>
-
-                                <Grid item xs={4}>
-                                    <img src={Agilcred} alt="Agilcred" />
-                                </Grid>
-                                <Grid item xs={4}>
-                                    <img src={Aginco} alt="Mutual Aginco" />
-                                </Grid>
-                                <Grid item xs={4}>
-                                    <img src={Gusa} alt="Grupo Union SA" />
-                                </Grid>
-
-                                <Grid item xs={4}>
-                                    <img src={Federada} alt="Federada ayuda economica" />
-                                </Grid>
-                                <Grid item xs={3}>
-                                    <img src={Amesup} alt="Amesup" />
-                                </Grid>
-                                <Grid item xs={3}>
-                                    <img src={Ivc} alt="IVC" />
-                                </Grid>
-                                <Grid item xs={2}>
-                                    <img src={Provincial} alt="Mutual Provincial" />
-                                </Grid>
-
-                                <Grid item xs={3}>
-                                    <img src={Mupim} alt="Mupim" />
-                                </Grid>
-                                <Grid item xs={2}>
-                                    <img src={Lyf} alt="Luz y Fuerza" />
-                                </Grid>
-                                <Grid item xs={4}>
-                                    <img src={Scbs} alt="San cristobal" />
-                                </Grid>
-                                <Grid item xs={3}>
-                                    <img src={Venado} alt="venado" />
-                                </Grid>
-
-                            </Grid>
-                        </Container>
+                      <Grid container rowGap={3} columnGap={3} sx={{
+                                width: '100%',
+                                alignItems: 'center',
+                                justifyContent: 'center'
+                            }}>
+                                { itemData.map((cliente) => {
+                                    return (
+                                        <Grid sx={{
+                                            alignItems: 'center',
+                                            justifyContent: 'center'
+                                        }}>
+                                            <Image>
+                                                <img width={'100%'} src={cliente.img} alt={cliente.title} />
+                                            </Image>
+                                        </Grid>
+                                    )
+                                })}
+                        </Grid>      
                     </Box>
                 </ScrollAnimation>
             </Box>
