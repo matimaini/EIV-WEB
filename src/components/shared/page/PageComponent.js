@@ -1,6 +1,6 @@
 import { ThemeProvider } from "@emotion/react"
 import { createTheme } from "@mui/material";
-import Barra from '../barra/Barra'
+import BarraR from '../../barra/BarraR'
 import Slider from '../../slider/Slider';
 import Empresa from "../../empresa/Empresa";
 import Contacto from "../../contacto/Contacto";
@@ -67,7 +67,7 @@ export const PageComponent = () => {
 
     return (
         <ThemeProvider theme={theme}>
-            <Barra />
+            <BarraR />
             { routes.map(({Component, name}) => (
               <>
                 <a name={name} href={`#${name}`}></a>

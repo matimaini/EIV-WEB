@@ -1,7 +1,7 @@
 import { Box, Typography } from '@mui/material'
 import React from 'react'
 import { FormComponent } from '../shared/form/FormComponent';
-
+import './Curriculum.css'
 const Curriculum = ({ fondo, colorfondo, titulo }) => {
     var someDate = new Date();
     var numberOfDaysToAdd = 3;
