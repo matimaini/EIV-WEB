@@ -1,37 +1,17 @@
 import React from 'react'
 import { Box } from '@mui/system'
-import { Container, Typography } from '@mui/material'
+import { Typography } from '@mui/material'
 import Curriculum from '../curriculum/Curriculum'
 import ScrollAnimation from 'react-animate-on-scroll'
+import FondoI from '../../assets/logos/img_contenido_redesc.png';
+import { ComponentContainer } from '../shared/container/componentContainer'
 
-
-const Rrhh = ({ fondo, colorfondo, titulo }) => {
+const Rrhh = () => {
     return (
-        <div>
             <>
-                
-
-                <Container maxWidth="100%"
-                    id="rrhh"
-                    align="center"
-                    justify="center"
-                    direction="column"
-                    sx={{
-                        bgcolor: colorfondo,
-                        minHeight: "100vh",
-                        verticalAlign: "center",
-                        alignContent: "center",
-                        backgroundImage: `url(${fondo} )`,
-                        backgroundRepeat: 'no-repeat',
-                        backgroundPosition: "center center",
-			            backgroundSize: "cover",
-			            backgroundAttachment: "fixed",
-                        display: "flex",
-
-                    }}  >
-
+                <ComponentContainer bgImg={FondoI}>
                     <Box sx={{
-                        textAlign: 'left', m: 'auto', width: '70%', mt: 5, mb: 5
+                        textAlign: 'left', mt: 5, mb: 5, width: '70%'
                     }}>
                         <ScrollAnimation
                             animateIn='fadeIn'
@@ -42,15 +22,14 @@ const Rrhh = ({ fondo, colorfondo, titulo }) => {
                             <Typography
                                 variant="h4"
                                 component="div"
-                                align="center"
+                                align="left"
+                                paddingBottom={'40px'}
                                 sx={{
                                     flexGrow: 1,
                                     fontFamily: 'Montserrat',
                                     fontWeight: 'bold'
                                 }}>
-
-                                {titulo}
-
+                                TALENTO HUMANO
                             </Typography>
 
                             <Box sx={{
@@ -67,7 +46,9 @@ const Rrhh = ({ fondo, colorfondo, titulo }) => {
                                         flexGrow: 1,
                                         fontFamily: 'Montserrat'
                                     }}>
-                                    <Box sx={{}}>
+                                    <Box sx={{
+                                        paddingLeft:"16px"
+                                    }}>
                                         <b>¿QUERÉS SER PARTE DE NUESTRO EQUIPO?</b>
                                         <p />
                                         EIV SOFTWARE S.R.L. ES UNA EMPRESA DE DESARROLLO DE SOFTWARE ORIENTADA A ENTIDADES FINANCIERAS.
@@ -84,16 +65,11 @@ const Rrhh = ({ fondo, colorfondo, titulo }) => {
 
                             <Curriculum
                                 titulo="DEJANOS TU CURRICULUM"
-
                             />
                         </ScrollAnimation>
                     </Box>
-
-
-
-                </Container>
+                </ComponentContainer>
             </>
-        </div>
     )
 }
 

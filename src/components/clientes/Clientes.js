@@ -1,97 +1,20 @@
 import React from 'react'
-import { Container, Typography } from '@mui/material'
+import { Typography } from '@mui/material'
 import Grid from '@mui/material/Grid';
 import { styled } from '@mui/material/styles';  
 import { Box } from '@mui/system'
-import Agilcred from '../../assets/logos/clientes/AGILCRED.png';
-import Aginco from '../../assets/logos/clientes/AGINCO.png';
-import Amesup from '../../assets/logos/clientes/AMESUP.png';
-import Federada from '../../assets/logos/clientes/FEDERADA.png';
-import Gusa from '../../assets/logos/clientes/GRUPO_UNION.png';
-import Ivc from '../../assets/logos/clientes/IVC.png';
-import Lyf from '../../assets/logos/clientes/LYF.png';
-import Mupim from '../../assets/logos/clientes/MUPIM.png';
-import Scbs from '../../assets/logos/clientes/SCBS.png';
-import Venado from '../../assets/logos/clientes/VENADO.png';
-import Provincial from '../../assets/logos/clientes/MUTUAL_PROVINCIAL.png';
+import { clientesData } from '../../data/clientesData';
 import ScrollAnimation from 'react-animate-on-scroll'
+import Fondo from '../../assets/logos/img_contenido_redesb.png';
+import { ComponentContainer } from '../shared/container/componentContainer';
 
-const Clientes = ({ fondo, colorfondo, titulo }) => {
-
+const Clientes = () => {
     const Image = styled(Box)(() => ({
         objectFit: 'scale-down',
     }))
 
-    const itemData = [
-        {
-          img: Agilcred,
-          title: 'Agilcred',
-        },
-        {
-            img: Aginco,
-            title: 'Mutual Aginco',
-        },
-        {
-            img: Gusa,
-            title: 'Grupo Union SA'
-        },
-        {
-            img: Federada,
-            title: 'Federada ayuda economica',
-        },
-        {
-            img: Amesup,
-            title: 'Amesup',
-        },
-        {
-            img: Ivc,
-            title: 'IVC'
-        },
-        {
-            img: Provincial,
-            title: 'Mutual Provincial',
-        },
-        {
-            img: Mupim,
-            title: 'Mupim'
-        },
-        {
-            img: Lyf,
-            title: 'Luz y fuerza',
-        }, 
-        {
-            img: Scbs,
-            title: 'San cristobal',
-        },
-        {
-            img: Venado,
-            title: 'Venado'
-        }
-      ];
-
-
     return (
-
-
-        <Container maxWidth="100%"
-            id="producto"
-            align="center"
-            justify="center"
-            direction="column"
-            sx={{
-                bgcolor: colorfondo,
-                minHeight: "100vh",
-                verticalAlign: "center",
-                alignContent: "center",
-                backgroundImage: `url(${fondo} )`,
-                backgroundRepeat: 'no-repeat',
-                backgroundPosition: "center center",
-                backgroundSize: "cover",
-                backgroundAttachment: "fixed",
-                display: "flex",
-                p: 5
-            }}  >
-
+        <ComponentContainer bgColor={'#373C46'} bgImg={Fondo}>
             <Box sx={{
                 textAlign: 'left', m: 'auto', width: '70%'
             }}>
@@ -111,10 +34,7 @@ const Clientes = ({ fondo, colorfondo, titulo }) => {
                                 fontFamily: 'Montserrat',
                                 fontWeight: 'bold'
                             }} >
-
-                            {titulo}
-
-
+                            ALGUNOS DE NUESTROS CLIENTES
                         </Typography>
                     </Box>
                     <Box sx={{
@@ -129,7 +49,7 @@ const Clientes = ({ fondo, colorfondo, titulo }) => {
                                 alignItems: 'center',
                                 justifyContent: 'center'
                             }}>
-                                { itemData.map((cliente, i) => {
+                                { clientesData.map((cliente, i) => {
                                     return (
                                         <Grid key={i} sx={{
                                             alignItems: 'center',
@@ -145,7 +65,7 @@ const Clientes = ({ fondo, colorfondo, titulo }) => {
                     </Box>
                 </ScrollAnimation>
             </Box>
-        </Container >
+        </ComponentContainer>
     )
 }
 

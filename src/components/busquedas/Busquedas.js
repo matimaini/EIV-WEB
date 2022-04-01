@@ -1,33 +1,14 @@
-
-import { Container, Fab, Typography } from '@mui/material'
-import AddIcon from '@mui/icons-material/Add';
+import { Typography } from '@mui/material'
 import { Box } from '@mui/system'
 import React from 'react'
 import ScrollAnimation from 'react-animate-on-scroll';
+import { ButtonComponent } from '../shared/button/ButtonComponent';
+import Fondo from '../../assets/logos/img_contenido_redesb.png';
+import { ComponentContainer } from '../shared/container/componentContainer';
 
-const Busquedas = ({ fondo, colorfondo, titulo }) => {
+const Busquedas = () => {
     return (
-        <Container maxWidth="100%"
-            id="producto"
-            align="center"
-            justify="center"
-            direction="column"
-            sx={{
-                bgcolor: colorfondo,
-                minHeight: "100vh",
-                verticalAlign: "center",
-                alignContent: "center",
-                backgroundImage: `url(${fondo} )`,
-                backgroundRepeat: 'no-repeat',
-                backgroundPosition: "center center",
-                backgroundSize: "cover",
-                backgroundAttachment: "fixed",
-                display: "flex",
-                /* m: 2 */
-
-
-            }}  >
-
+        <ComponentContainer bgColor="#373C46" bgImg={Fondo}>
             <Box sx={{
                 textAlign: 'left', m: 'auto', width: '70%', mt: 5, mb: 5
             }}>
@@ -48,9 +29,7 @@ const Busquedas = ({ fondo, colorfondo, titulo }) => {
                                 fontFamily: 'Montserrat',
                                 fontWeight: 'bold'
                             }}>
-
-                            {titulo}
-
+                            BUSQUEDAS LABORALES
                         </Typography>
                     </Box>
                     <Box sx={{
@@ -100,28 +79,13 @@ const Busquedas = ({ fondo, colorfondo, titulo }) => {
                                         <li>Flexibilidad para trabajo en nuestras oficinas o trabajo remoto</li>
                                     </ul>
                                 </div>
-                                <div align="center">
-                                    <Fab variant="extended"
-                                        href="#rrhh"
-                                        color="secondary"
-                                        aria-label="add"
-                                        elementtype="file"
-                                        component="span"
-                                        sx={{ m: 2 }} >
-
-                                        <AddIcon elementtype='file' />
-                                        Envianos tu CV
-                                    </Fab>
-
-                                </div>
+                                <ButtonComponent text="Envianos tu cv" icon="add" type="file" name="#rrhh"/>
                             </Box>
                         </Typography>
-
                     </Box>
                 </ScrollAnimation>
             </Box>
-
-        </Container >
+        </ComponentContainer>
     )
 }
 

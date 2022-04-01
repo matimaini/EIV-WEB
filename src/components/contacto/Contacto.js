@@ -1,41 +1,14 @@
-import React /*, { useState }*/ from 'react'
-
-import {  Box, Container,  Typography } from '@mui/material'
-import FormularioC from './FormularioC';
-import './Contacto.css'
+import React from 'react'
+import { Box, Typography } from '@mui/material'
 import ScrollAnimation from 'react-animate-on-scroll';
-//import { Form } from 'react-bootstrap';
-//import FormularioFormik from './formik';
+import FormularioC from './FormularioC';
+import Fondo from '../../assets/logos/img_contenido_redesb.png';
+import { ComponentContainer } from '../shared/container/componentContainer';
 
-
-
-const Contacto = ({ fondo, colorfondo, titulo }) => {
-
-
-
-//const [producto, setproducto] = useState("")
-
+const Contacto = () => {
   return (
     <>
-      <Container maxWidth="100%"
-        id="producto"
-        align="center"
-        justify="center"
-        direction="column"
-        sx={{
-          bgcolor: colorfondo,
-          minHeight: "100vh",
-          verticalAlign: "center",
-          alignContent: "center",
-          backgroundImage: `url(${fondo} )`,
-          backgroundRepeat: 'no-repeat',
-          backgroundPosition: "center center",
-          backgroundSize: "cover",
-          backgroundAttachment: "fixed",
-          display: "flex",
-
-        }}  >
-
+      <ComponentContainer bgImg={Fondo}>
         <Box
            sx={{ m: 'auto', textAlign: 'center', }}>
           <ScrollAnimation
@@ -54,7 +27,7 @@ const Contacto = ({ fondo, colorfondo, titulo }) => {
                 fontWeight: 'bold',
                 mt: 2
               }} >
-              {titulo}
+              CONTACTO
             </Typography>
 
             <Box component="form"
@@ -66,12 +39,10 @@ const Contacto = ({ fondo, colorfondo, titulo }) => {
               <div>
                 <FormularioC />
               </div>
-
             </Box>
           </ScrollAnimation>
         </Box>
-
-      </Container>
+      </ComponentContainer>
     </>
   )
 }

@@ -1,31 +1,14 @@
 import React from 'react'
-import './Empresa.css'
 import { Box } from '@mui/system'
-import { Container, Typography } from '@mui/material'
+import { Typography } from '@mui/material'
 import ScrollAnimation from 'react-animate-on-scroll'
+import Fondo from '../../assets/logos/img_contenido_redesb.png';
+import { ComponentContainer } from '../shared/container/componentContainer';
 
-
-
-const Empresa = ({ fondo, colorfondo, titulo }) => {
+const Empresa = () => {
 
     return (
-        <Container maxWidth="100% "
-            align="center"
-            justify="center"
-            direction="column"
-            sx={{
-                bgcolor: colorfondo,
-                minHeight: "100vh",
-                verticalAlign: "center",
-                alignContent: "center",
-                backgroundImage: `url(${fondo} )`,
-                backgroundRepeat: 'no-repeat',
-                backgroundPosition: "center center",
-                backgroundSize: "cover",
-                backgroundAttachment: "fixed",
-                display: "flex",
-            }}  >
-
+       <ComponentContainer bgColor="#373C46" bgImg={Fondo}>
             <Box sx={{
                 textAlign: 'left', m: 'auto', width: '70%'
             }}>
@@ -43,11 +26,9 @@ const Empresa = ({ fondo, colorfondo, titulo }) => {
                             sx={{
                                 flexGrow: 1,
                                 fontFamily: 'Montserrat',
-                                /* fontWeight: 'bold' */
+                                fontWeight: 'bold'
                             }} >
-
-                            {titulo}
-
+                            NUESTRA EMPRESA
                         </Typography>
                     </Box>
                     <Box sx={{
@@ -56,7 +37,6 @@ const Empresa = ({ fondo, colorfondo, titulo }) => {
                         borderColor: 'text.primary',
                         p: 2, textTransform: 'uppercase'
                     }}>
-
                         <Typography
                             variant="h6"
                             component="div"
@@ -65,7 +45,7 @@ const Empresa = ({ fondo, colorfondo, titulo }) => {
                                 flexGrow: 1,
                                 fontFamily: 'Montserrat'
                             }}>
-                            <Box>
+                            <Box sx={{ paddingLeft: '16px'}}>
                                 Somos una empresa con mas de 35 años brindando servicios de software de gestion integral
                                 con el fin de satisfacer las necesidades informaticas con alto nivel de innovación y calidad hacia nuestros clientes.
                                 EIV Software es una empresa que nace y se nutre de un grupo de profesionales altamente especializados en distintas áreas.
@@ -76,12 +56,10 @@ const Empresa = ({ fondo, colorfondo, titulo }) => {
 
                             </Box>
                         </Typography>
-
                     </Box>
                 </ScrollAnimation>
             </Box>
-        </Container>
-
+        </ComponentContainer>
     )
 }
 
