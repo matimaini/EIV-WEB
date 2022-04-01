@@ -2,13 +2,13 @@ import React from 'react'
 import { Box, Typography } from '@mui/material'
 import ScrollAnimation from 'react-animate-on-scroll';
 import FormularioC from './FormularioC';
-import Fondo from '../../assets/logos/img_contenido_redesb.png';
+import FondoI from '../../assets/logos/img_contenido_redesc.png';
 import { ComponentContainer } from '../shared/container/componentContainer';
 
 const Contacto = () => {
   return (
     <>
-      <ComponentContainer bgImg={Fondo}>
+      <ComponentContainer bgImg={FondoI}>
         <Box
            sx={{ m: 'auto', textAlign: 'center', }}>
           <ScrollAnimation
