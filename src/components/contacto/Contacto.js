@@ -17,7 +17,7 @@ const Contacto = () => {
         label: 'Nombre y apellido',
         required: true,
     },
-    empresa: {
+    empresas: {
         value: '',
         label: 'Empresa',
         required: true,

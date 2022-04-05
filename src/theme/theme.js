@@ -9,6 +9,15 @@ const theme = createTheme({
           }
         }
       },
+      MuiButton: {
+        styleOverrides: {
+          root :{
+              ":hover": {
+                color: '#01404F'
+            }
+          }
+        }
+      },
       MuiPaper: {
         styleOverrides: {
           root: {

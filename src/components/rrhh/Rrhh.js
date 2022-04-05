@@ -59,13 +59,14 @@ const Rrhh = () => {
                                     }}>
                                         <b>¿QUERÉS SER PARTE DE NUESTRO EQUIPO?</b>
                                         <p />
-                                        EIV SOFTWARE S.R.L. ES UNA EMPRESA DE DESARROLLO DE SOFTWARE ORIENTADA A ENTIDADES FINANCIERAS.
-                                        EN EIV CREEMOS EN EL TRABAJO EN EQUIPO, COMO MOTOR DE MAYOR MOTIVACION, COMPROMISO, NUEVAS IDEAS Y MEJORES RESULTADOS.
-                                        ES POR ESO QUE CONSIDERAMOS SUMARTE A NUESTRO EQUIPO.<br />
-                                        <p><b>CONOCIMIENTOS DE: </b></p>
-                                        <b>BASES DE DATOS: </b>SQL, MONGODB, ELASTIC SEARCH.<br />
-                                        <b>LENGUAJES: </b>JAVA, JAVASCRIPT, VB6.<br />
-                                        <b>FRAMEWORK: </b>SPRING, ANGULAR, REACT.<br />
+                                        
+                                        EIV Software S.R.L. es una empresa de desarrollo de software orientada a entidades financieras.
+                                        En EIV creemos en el trabajo en equipo, como motor de mayor motivacion, compromiso, nuevas ideas y mejores resultados.
+                                        Es por eso que consideramos sumarte a nuestro equipo.<br />
+                                        <p><b>Conocimientos de: </b></p>
+                                        <b>Bases de datos: </b>SQL, MongoDB, Elastic Search.<br />
+                                        <b>Lenguajes: </b>Java, Javascript, VB6.<br />
+                                        <b>Framework: </b>Spring, Angular, React.<br />
 
                                     </Box>
                                 </Typography>
