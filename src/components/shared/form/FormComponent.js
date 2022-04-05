@@ -7,15 +7,16 @@ export const FormComponent = ({initialForm}) => {
     const { state, submitHandler, changeHandler } = useForm(initialForm, values => console.log(values))
 
     return(
-        <form style={{width: '90%'}} onSubmit={submitHandler}>
+        <Box component="form" onSubmit={submitHandler} sx={{ textAlign: 'center', display: 'grid', flexWrap: 'wrap'}}>
             {
                 Object.keys(state).map((key) => {
                     if(key !== 'file') {
                         return (
                         <TextField 
+                            key={key}
                             id={key}
-                            onChange={changeHandler}
-                            value={state[key].value}
+                            onChange={(event) => changeHandler(event)}
+                            value={state[key].value ? state[key].value : state[key].defaultValue}
                             label={state[key].label}
                             required={state[key].required}
                             type={state[key].type}
@@ -24,7 +25,7 @@ export const FormComponent = ({initialForm}) => {
                             color="secondary" 
                         ></TextField>)
                     } else {
-                        return <></>
+                        return null;
                     }
                 })
             }
@@ -32,11 +33,12 @@ export const FormComponent = ({initialForm}) => {
                 sx={{
                     justifyContent: 'space-around', 
                     p: 2, 
-                    display: 'flex' 
+                    display: 'flex',
+                    flexWrap: 'wrap' 
                 }}>
                 {initialForm.file ? <ButtonComponent change={changeHandler} htmlFor={'file'} icon="add" text="Adjuntá tu CV" inputFile /> : ''}
                 <ButtonComponent type="submit" htmlFor="send-cv" icon="nav" text="Enviar formulario" />
             </Box>     
-        </form>
+        </Box>
     )
 }

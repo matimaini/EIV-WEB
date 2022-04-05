@@ -11,6 +11,7 @@ export const productosData = [
         titulo: "PORTAL VENDEDORES",
         data: "PLATAFORMA ONLINE DONDE PERMITIRA REALIZAR GESTION DE PRESTAMOS DESDE UNA BASE EXTERNA",
         imagen: PortalVendedores,
+        name: "vendedores"
     },
     {
         id: 2,
@@ -19,12 +20,14 @@ export const productosData = [
         titulo: "PORTAL CLIENTES",
         data: "PLATAFORMA ONLINE DISEÑADA CON EL FIN DE ACOMPAÑAR Y ADMINISTRAR LOS MOVIMIENTOS DE TUS ASOCIADOS",
         imagen: PortalClientes,
+        name: "portal-clientes"
     }, 
     {
         id: 3,
         fondo: FondoI,
         titulo: "ADMINISTRACION DE TARJETAS",
         data: "PARA SUMAR A TU COMBO DE PRODUCTOS, LA GESTION DE TARJETAS DE CREDITO. NUESTRO SOFTWARE CUENTA CON UN MODULO COMPLETO PARA DICHA ADMINISTRACION",
-        imagen: Tarjetas
+        imagen: Tarjetas,
+        name: "tarjetas"
     },
 ]

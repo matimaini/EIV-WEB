@@ -11,6 +11,7 @@ import { ComponentContainer } from '../shared/container/componentContainer';
 const Clientes = () => {
     const Image = styled(Box)(() => ({
         objectFit: 'scale-down',
+        width: 'fit-content'
     }))
 
     return (
@@ -44,17 +45,14 @@ const Clientes = () => {
                         justifyContent: 'center',
                         alignItems: 'center'
                     }}>
-                      <Grid container rowGap={3} columnGap={3} sx={{
+                      <Grid container columns={{ xs: 1, sm: 2, md: 4 }} spacing={2} rowGap={3} columnGap={3} sx={{
                                 width: '100%',
                                 alignItems: 'center',
-                                justifyContent: 'center'
+                                justifyContent: 'center',
                             }}>
                                 { clientesData.map((cliente, i) => {
                                     return (
-                                        <Grid key={i} sx={{
-                                            alignItems: 'center',
-                                            justifyContent: 'center'
-                                        }}>
+                                        <Grid item key={i} sx={{}}>
                                             <Image>
                                                 <img width={'100%'} src={cliente.img} alt={cliente.title} />
                                             </Image>

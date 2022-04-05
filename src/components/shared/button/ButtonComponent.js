@@ -18,16 +18,16 @@ export const ButtonComponent = ({type, name, text, htmlFor, inputFile, icon, cha
     }
     return (
         <label align="center" htmlFor={htmlFor}>
-            {inputFile ? <input onChange={change} type="file" id={htmlFor} style={{ display: 'none' }}></input> : ''}
+            {inputFile ? <input onChange={(e) => change(e)} type="file" id={htmlFor} style={{ display: 'none' }}></input> : ''}
             <Fab 
+                color="black"
                 variant="extended"
                 href={name}
-                color="secondary"
                 aria-label="add"
                 type={type ? 'submit': ''}
                 elementtype='file'
                 component={type? 'button': 'span'}
-                sx={{ m: 2 }} >
+                sx={{ m: 2, minWidth:"200px" }} >
                 <IconComponent />
                 {text}
             </Fab>

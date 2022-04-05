@@ -1,0 +1,15 @@
+.form-container {
+    width: 46%;
+    margin-right: 16px; 
+}
+
+.css-4r5xw8-MuiFormLabel-root-MuiInputLabel-root {
+    transform: translate(14px, -2px) scale(0.75) !important;
+
+}
+
+@media(max-width: 500px) {
+    .form-container {
+        width: 100%;
+    }
+}

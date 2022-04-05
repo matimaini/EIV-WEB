@@ -8,17 +8,25 @@ import { ComponentContainer } from '../shared/container/componentContainer'
 
 const Rrhh = () => {
     return (
-            <>
-                <ComponentContainer bgImg={FondoI}>
+        <>
+            <ComponentContainer bgImg={FondoI}>
+                <ScrollAnimation
+                    animateIn='fadeIn'
+                    animateOut='fadeOut'
+                    duration={1}
+                    delay={0.5}
+                >
                     <Box sx={{
-                        textAlign: 'left', mt: 5, mb: 5, width: '70%'
+                        display: 'flex',
+                        flexDirection: 'column',
+                        justifyContent: 'center', 
+                        alignItems: 'center', 
+                        textAlign: 'left', 
+                        mt: 5, 
+                        mb: 5, 
+                        width: '100%'
                     }}>
-                        <ScrollAnimation
-                            animateIn='fadeIn'
-                            animateOut='fadeOut'
-                            duration={1}
-                            delay={0.5}
-                        >
+                        <div style={{width: '70%'}}>
                             <Typography
                                 variant="h4"
                                 component="div"
@@ -62,14 +70,14 @@ const Rrhh = () => {
                                     </Box>
                                 </Typography>
                             </Box>
-
-                            <Curriculum
-                                titulo="DEJANOS TU CURRICULUM"
-                            />
-                        </ScrollAnimation>
+                        </div>
+                        <Curriculum
+                            titulo="DEJANOS TU CURRICULUM"
+                        />
                     </Box>
-                </ComponentContainer>
-            </>
+                </ScrollAnimation>
+            </ComponentContainer>
+        </>
     )
 }
 

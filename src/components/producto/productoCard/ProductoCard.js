@@ -7,18 +7,18 @@ export const ProductoCard = ({data, showImg, imagen}) => {
             display: showImg ? 'none' : 'inline'
         })
     }
-    
+
     return(
         <>
             <Box sx={{
                     textAlign: 'left',
                     borderLeft: 10,
                     borderColor: 'text.primary',
-                    p: 2, 
-                }}>
+                    padding: '16px 0 16px 16px'
+                    }}>
                     <Card sx={{ display: 'flex', bgcolor: 'transparent', boxShadow: 'none', verticalAlign: 'middle' }}>
                         <Box sx={{}}>
-                            <CardContent sx={{ flex: '1 0 auto', justifyContent: 'center' }}>
+                            <CardContent sx={{ flex: '1 0 auto', justifyContent: 'center', padding: '16px 0 16px 16px' }}>
                                 <Typography
                                     variant="h6"
                                     component="div"

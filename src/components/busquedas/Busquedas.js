@@ -48,30 +48,29 @@ const Busquedas = () => {
                                 fontFamily: 'Montserrat'
                             }}>
                             <Box sx={{
-                                ml: 5
+                                paddingLeft: '16px'
                             }}>
-                                <u><b>DESARROLLADORES JAVA/.NET</b></u>
-                                <p />
+                                <b>DESARROLLADORES JAVA/.NET</b>
                                 <div sx={{}}>
-                                    Formá parte de un equipo de implementación de software<br />
-                                    <p><b><u>REQUISITOS EXCLUYENTES:</u></b></p>
-                                    <ul>
-                                        <li> Backend java o .net developer con +3 años de experiencia</li>
+                                    <p>Formá parte de un equipo de implementación de software</p>
+                                    <p style={{marginBottom: 0}}><b>REQUISITOS EXCLUYENTES:</b></p>
+                                    <ul style={{fontSize: '1.1rem'}}>
+                                        <li>Backend java o .net developer con +3 años de experiencia</li>
                                         <li>Conocimientos de bases de datos relacionales y transact-sql</li>
                                         <li>Experiencia y/o conocimientos consumiendo y desarrollando servicios rest y/o soap</li>
                                         <li>Buen manejo de herramientas de versionado de codigo / git</li>
                                         <li>Nivel de ingles: intermedio</li>
                                     </ul>
-                                    <p><b>Requisitos deseables: </b></p>
-                                    <ul>
+                                    <p style={{marginBottom: 0}}><b>REQUISITOS DESEABLES: </b></p>
+                                    <ul style={{fontSize: '1.1rem'}}>
                                         <li>TDD e integracion continua</li>
                                         <li>Revision de código, ajuste de performance, cuellos de botella</li>
                                         <li>Patrones de diseño y arquitectura, event-driven architecture y soa</li>
                                         <li>Experiencia en rubro de seguros</li>
                                         <li>Experiencia en prácticas agile, metodologia scrum</li>
                                     </ul>
-                                    <p><b>OFRECEMOS: </b></p>
-                                    <ul>
+                                    <p style={{marginBottom: 0}}><b>OFRECEMOS: </b></p>
+                                    <ul style={{fontSize: '1.1rem'}}>
                                         <li>Bono anual por cumplimiento de objetivos</li>
                                         <li>Acceso a plataforma de capacitacion online</li>
                                         <li>Beneficios para tu salud y bienestar</li>

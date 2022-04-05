@@ -2,10 +2,9 @@ import { Box, Typography } from '@mui/material'
 import React from 'react'
 import { FormComponent } from '../shared/form/FormComponent';
 import './Curriculum.css'
-const Curriculum = ({ fondo, colorfondo, titulo }) => {
+const Curriculum = ({ titulo }) => {
     var someDate = new Date();
-    var numberOfDaysToAdd = 3;
-    var date = someDate.setDate(someDate.getDate() + numberOfDaysToAdd);
+    var date = someDate.setDate(someDate.getDate());
     var defaultValue = new Date(date).toISOString().split("T")[0];
 
     const initialForm = {
@@ -18,6 +17,7 @@ const Curriculum = ({ fondo, colorfondo, titulo }) => {
             value: '',
             label: 'Fecha de Nacimiento',
             type: 'date',
+            defaultValue: defaultValue,
             required: true,
         },
         domicilio: {
@@ -42,6 +42,7 @@ const Curriculum = ({ fondo, colorfondo, titulo }) => {
             multiline: true,
         },
         file: {
+            value: null,
             type: 'file',
             label: 'add-cv',
         }

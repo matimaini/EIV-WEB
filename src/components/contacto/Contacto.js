@@ -1,16 +1,81 @@
 import React from 'react'
 import { Box, Typography } from '@mui/material'
 import ScrollAnimation from 'react-animate-on-scroll';
-import FormularioC from './FormularioC';
 import Fondo from '../../assets/logos/img_contenido_redesb.png';
 import { ComponentContainer } from '../shared/container/componentContainer';
+import { ContactForm } from './contactForm/contactForm';
 
 const Contacto = () => {
+  const form = {
+    producto: {
+        value: 'Portal vendedores',
+        label: 'Producto',
+        required: true,
+    },
+    nombre: {
+        value: '',
+        label: 'Nombre y apellido',
+        required: true,
+    },
+    empresa: {
+        value: '',
+        label: 'Empresa',
+        required: true,
+    },
+    telefono: {
+        value: '',
+        label: 'Teléfono',
+        required: true,
+        type: 'number'
+    },
+    celular: {
+        value: '',
+        label: 'Celular',
+        type: 'number'
+    },
+    domicilio: {
+        value: '',
+        label: 'Domicilio',
+    },
+    localidad: {
+        value: '',
+        label: 'Localidad',
+    },
+    provincia: {
+        value: '',
+        label: 'Provincia',
+    },
+    pais: {
+        value: '',
+        label: 'País'
+    },
+    email: {
+        value: '',
+        label: 'Email',
+        type: 'email',
+        required: true,
+    },
+    comentario: {
+        value: '',
+        label: 'Comentarios',
+        required: true,
+        multiline: true,
+        outlined: 'outlined-textarea'
+    }     
+  }
+
   return (
     <>
       <ComponentContainer bgImg={Fondo}>
         <Box
-           sx={{ m: 'auto', textAlign: 'center', }}>
+           sx={{ 
+              width: '100%', 
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center', 
+              alignItems: 'center', 
+              textAlign: 'left', 
+            }}>
           <ScrollAnimation
             animateIn='fadeIn'
             animateOut='fadeOut'
@@ -29,16 +94,14 @@ const Contacto = () => {
               }} >
               CONTACTO
             </Typography>
-
-            <Box component="form"
-              sx={{
-                textAlign: 'center', display: 'grid', flexWrap: 'wrap'
-
-              }}>
-
-              <div>
-                <FormularioC />
-              </div>
+            <Box
+                component="div"
+                justifyContent={'center'}
+                alignItems={'center'}
+                display={'flex'}
+                flexDirection={'column'}
+            >            
+              <ContactForm initialForm={form}/>
             </Box>
           </ScrollAnimation>
         </Box>

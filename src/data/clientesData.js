@@ -12,47 +12,47 @@ import Provincial from '../assets/logos/clientes/MUTUAL_PROVINCIAL.png';
 
 export const clientesData = [
     {
-      img: Agilcred,
-      title: 'Agilcred',
-    },
-    {
         img: Aginco,
         title: 'Mutual Aginco',
     },
     {
-        img: Gusa,
-        title: 'Grupo Union SA'
-    },
-    {
-        img: Federada,
-        title: 'Federada ayuda economica',
+        img: Agilcred,
+        title: 'Agilcred',
     },
     {
         img: Amesup,
         title: 'Amesup',
     },
     {
-        img: Ivc,
-        title: 'IVC'
+        img: Mupim,
+        title: 'Mupim'
+    },
+    {
+        img: Venado,
+        title: 'Venado'
     },
     {
         img: Provincial,
         title: 'Mutual Provincial',
     },
     {
-        img: Mupim,
-        title: 'Mupim'
+        img: Gusa,
+        title: 'Grupo Union SA'
     },
     {
-        img: Lyf,
-        title: 'Luz y fuerza',
-    }, 
+        img: Ivc,
+        title: 'IVC'
+    },
     {
         img: Scbs,
         title: 'San cristobal',
     },
     {
-        img: Venado,
-        title: 'Venado'
-    }
-  ];
+        img: Federada,
+        title: 'Federada ayuda economica',
+    },
+    {
+        img: Lyf,
+        title: 'Luz y fuerza',
+    },      
+];
