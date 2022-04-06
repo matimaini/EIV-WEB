@@ -8,6 +8,7 @@ import Busquedas from "../../busquedas/Busquedas";
 import Rrhh from "../../rrhh/Rrhh";
 import Clientes from "../../clientes/Clientes";
 import Producto from "../../producto/Producto";
+import Footer from '../../footer/Footer';
 import { productosData } from "../../../data/productosData";
 import theme from '../../../theme/theme'
 
@@ -38,7 +39,8 @@ export default function PageComponent() {
     { Component: Clientes, name: 'clientes', id: 4},
     { Component: Rrhh, name: 'rrhh', id: 5},
     { Component: Busquedas, name: 'busquedas', id: 6},
-    { Component: Contacto, name: 'contacto', id: 7}
+    { Component: Contacto, name: 'contacto', id: 7},
+    { Component: Footer, name: 'footer', id: 8}
   ]  
 
   return (

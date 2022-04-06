@@ -48,7 +48,16 @@ export const FormComponent = ({ initialForm }) => {
                 alignItems: 'end'
             }}>
 
-                <Typography variant='p' sx={{ overflow: 'hidden', width: '100%', whiteSpace: 'nowrap', justifyContent: 'center', color: 'white', padding: 0, margin: 0, textOverflow: 'ellipsis' }}>
+                <Typography variant='subtitle2' 
+                            sx={{ 
+                                overflow: 'hidden', 
+                                width: '100%', 
+                                whiteSpace: 'nowrap', 
+                                justifyContent: 'center', 
+                                color: 'white', 
+                                padding: 0, 
+                                margin: 0, 
+                                textOverflow: 'ellipsis' }}>
 
                     Archivo seleccionado: {state.file.name}
                 </Typography>
