@@ -5,18 +5,21 @@ export const useForm = (initialValues, onSubmit) => {
 
     function changeHandler(event, newEvent = null) {
         let { id, value, files } = event.target;
-        let updatedElement = null;
+
+        let updatedElement = null
 
         const idState = newEvent?.parent?? id;
         const valueState = newEvent?.value?? newEvent?? value;
 
         if(id === 'file') {
-            updatedElement = { ...state[idState]};     
-            updatedElement.value = [files];
+            console.log(event)
+            updatedElement = { ...state[idState] };     
+            updatedElement.value = files[0];
+            updatedElement.name = files[0].name;
+        } else {
+            updatedElement = { ...state[idState] };     
+            updatedElement = { ...updatedElement, value: valueState };
         }
-
-        updatedElement = { ...state[idState]};     
-        updatedElement.value = valueState;
 
         dispatch({idState, updatedElement})
     };

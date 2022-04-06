@@ -43,6 +43,7 @@ const Curriculum = ({ titulo }) => {
         },
         file: {
             value: null,
+            name: '',
             type: 'file',
             label: 'add-cv',
         }
