@@ -13,7 +13,8 @@ const theme = createTheme({
         styleOverrides: {
           root :{
               ":hover": {
-                color: '#01404F'
+                color: '#01404F',
+                backgroundColor: '#DFF5FF'
             }
           }
         }

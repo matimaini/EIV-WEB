@@ -17,7 +17,7 @@ export default function PageComponent() {
       <>
         {productosData.map(producto => (
           <Fragment key={producto.id}>
-            <a name={producto.name} href={`#${producto.name}`}></a>
+            <a name={producto.name} href={`#${producto.name}`}> </a>
             <Producto 
               fondo={producto.fondo} 
               titulo={producto.titulo} 
@@ -46,7 +46,7 @@ export default function PageComponent() {
         <BarraR />
         { routes.map(({Component, name, id}) => (
           <Fragment key={id}>
-            <a name={name} href={`#${name}`}></a>
+            <a name={name} href={`#${name}`}> </a>
             <Component />
           </Fragment>
         ))}

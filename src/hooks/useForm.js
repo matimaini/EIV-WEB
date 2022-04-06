@@ -15,7 +15,7 @@ export const useForm = (initialValues, onSubmit) => {
             console.log(event)
             updatedElement = { ...state[idState] };     
             updatedElement.value = files[0];
-            updatedElement.name = files[0].name;
+            updatedElement.name = files[0]?.name;
         } else {
             updatedElement = { ...state[idState] };     
             updatedElement = { ...updatedElement, value: valueState };
