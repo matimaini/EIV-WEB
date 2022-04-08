@@ -12,12 +12,12 @@ const Contacto = () => {
         label: 'Producto',
         required: true,
     },
-    nombre: {
+    nombreApellido: {
         value: '',
         label: 'Nombre y apellido',
         required: true,
     },
-    empresas: {
+    empresa: {
         value: '',
         label: 'Empresa',
         required: true,
@@ -55,7 +55,7 @@ const Contacto = () => {
         type: 'email',
         required: true,
     },
-    comentario: {
+    comentarios: {
         value: '',
         label: 'Comentarios',
         required: true,

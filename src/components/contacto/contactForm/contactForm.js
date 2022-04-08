@@ -3,9 +3,12 @@ import { useForm } from "../../../hooks/useForm";
 import './contactForm.css';
 import { ButtonComponent } from "../../shared/button/ButtonComponent";
 import ClearIcon from '@mui/icons-material/Clear';
+import { useAxios } from "../../../hooks/useAxios";
+import { useEffect } from "react";
 
 export const ContactForm = ({initialForm}) => {
-    const { state, changeHandler, submitHandler } = useForm(initialForm, values => console.log(values));
+    const { fetchData } = useAxios();
+    const { state, changeHandler, submitHandler } = useForm(initialForm, (values, captcha) => fetchData('post', '/consultas', captcha, values));
 
     const options = [
         { parent: "producto", label: "Portal vendedores", value: "Portal vendedores", id: 1 },
@@ -19,6 +22,10 @@ export const ContactForm = ({initialForm}) => {
 
        return optionSelected
     }
+
+    const verifyResponse = function(response) {
+        console.log(response)
+      }
 
     return(
         <>
@@ -92,8 +99,8 @@ export const ContactForm = ({initialForm}) => {
                                 />
                             )
                     }
-                })}
-                <Box sx={{ justifyContent: 'center', p: 2, display: 'block', width: '100%' }}>
+                })}                
+                <Box sx={{ justifyContent: 'center', p: 2, display: 'flex', flexDirection: 'column', width: '100%' }}>
                     <ButtonComponent type="submit" icon="nav" text="Enviar formulario"/>
                 </Box>
             </Box>

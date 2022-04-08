@@ -8,7 +8,7 @@ const Curriculum = ({ titulo }) => {
     var defaultValue = new Date(date).toISOString().split("T")[0];
 
     const initialForm = {
-        nombre: {
+        nombreApellido: {
             value: '',
             label: 'Nombre y apellido',
             required: true,
@@ -41,7 +41,7 @@ const Curriculum = ({ titulo }) => {
             label: 'Comentarios',
             multiline: true,
         },
-        file: {
+        archivos: {
             value: null,
             name: '',
             type: 'file',
